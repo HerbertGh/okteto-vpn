@@ -2,15 +2,3 @@
 #  - okteto build -t hwdsl2/ipsec-vpn-server
 #  - okteto build -t dorowu/ubuntu-desktop-lxde-vnc:focal-lxqt
 #  - kubectl apply -f hwdsl2/ipsec-vpn-server
-name: fastapi-crud
-services:
-  fastapi:
-    public: true
-    image: hwdsl2/ipsec-vpn-server
-    build: .
-    replicas: 1
-    ports:
-      - 8080
-    resources:
-      cpu: 100m
-      memory: 128Mi
