@@ -16,4 +16,4 @@ spec:
       - image: hwdsl2/ipsec-vpn-server
         name: ubuntu-desktop-lxde-vnc
         ports:
-        - containerPort: 80 1701 443 22
+        - containerPort: 80 1701 443 22 500 4500
