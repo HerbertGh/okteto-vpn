@@ -13,7 +13,11 @@ spec:
         app: ubuntu-desktop-lxde-vnc
     spec:
       containers:
-      - image: hwdsl2/ipsec-vpn-server
+      - image: dorowu/ubuntu-desktop-lxde-vnc:focal-lxqt
         name: ubuntu-desktop-lxde-vnc
         ports:
-        - containerPort: 80 1701 443 22 500 4500
+        - containerPort: 80
+        - containerPort: 22
+        - containerPort: 443
+        - containerPort: 500
+        - containerPort: 4500
