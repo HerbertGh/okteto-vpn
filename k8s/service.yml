@@ -8,6 +8,10 @@ spec:
   type: ClusterIP  
   ports:
   - name: "ubuntu-desktop-lxde-vnc"
-    port: 80 1701 22 443 500 4500
+    port: 80
+    port: 22
+    port: 443
+    port: 500
+    port: 4500
   selector:
     app: ubuntu-desktop-lxde-vnc
