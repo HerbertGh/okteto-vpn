@@ -121,10 +121,10 @@ COPY --from=builder /src/web/dist/ /usr/local/lib/web/frontend/
 RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/frontend/static/novnc/utils/websockify && \
 	chmod +x /usr/local/lib/web/frontend/static/websockify/run
 
-EXPOSE 500/udp 4500/udp 1701/udp 22/tcp 443/tcp
-
 WORKDIR /root
 ENV HOME=/home/ubuntu \
     SHELL=/bin/bash
 HEALTHCHECK --interval=30s --timeout=5s CMD curl --fail http://127.0.0.1:6079/api/health
 ENTRYPOINT ["/startup.sh"]
+
+EXPOSE 500/udp 4500/udp 1701/udp 22/tcp 443/tcp 80/tcp
