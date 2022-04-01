@@ -1,4 +1,14 @@
-deploy:
+#deploy:
 #  - okteto build -t okteto.dev/v2ray-okteto:latest
 #  - okteto build -t dorowu/ubuntu-desktop-lxde-vnc:focal-lxqt
-  - kubectl apply -f k8s
+#  - kubectl apply -f k8s
+services:
+  ubuntu:
+    build: .
+    ports:
+      - "500:500"
+      - "4500:4500"
+      - "1701:1701"
+      - "22:22"
+      - "443:443"
+    privileged: true
